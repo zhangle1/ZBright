@@ -1,0 +1,14 @@
+D:\ZBright\ZAdmin\ZAdmin.Core\bin\Release\net6.0\ZAdmin.Core.deps.json
+D:\ZBright\ZAdmin\ZAdmin.Core\bin\Release\net6.0\ZAdmin.Core.dll
+D:\ZBright\ZAdmin\ZAdmin.Core\bin\Release\net6.0\ZAdmin.Core.pdb
+D:\ZBright\ZAdmin\ZAdmin.Core\bin\Release\net6.0\ZAdmin.Core.xml
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ZAdmin.Core.csproj.AssemblyReference.cache
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ZAdmin.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ZAdmin.Core.AssemblyInfoInputs.cache
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ZAdmin.Core.AssemblyInfo.cs
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ZAdmin.Core.csproj.CoreCompileInputs.cache
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ZAdmin.Core.dll
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\refint\ZAdmin.Core.dll
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ZAdmin.Core.pdb
+D:\ZBright\ZAdmin\ZAdmin.Core\obj\Release\net6.0\ref\ZAdmin.Core.dll
+D:\ZBright\ZAdmin\ZAdmin.Core\bin\Release\net6.0\applicationconfig.json

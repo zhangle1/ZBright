@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "ayxejGAV57CZDsqSiNFrRAVosy+e3b5/gEaIbLpZaUU=",
+  "Source": "ZAdmin.Web.Entry",
+  "BasePath": "_content/ZAdmin.Web.Entry",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ZAdmin.Web.Entry\\wwwroot",
+      "Source": "ZAdmin.Web.Entry",
+      "ContentRoot": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\wwwroot\\",
+      "BasePath": "_content/ZAdmin.Web.Entry",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\wwwroot\\images\\logo.png",
+      "SourceId": "ZAdmin.Web.Entry",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\wwwroot\\",
+      "BasePath": "_content/ZAdmin.Web.Entry",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    }
+  ]
+}

@@ -1,0 +1,2961 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZAdmin.Core</name>
+    </assembly>
+    <members>
+        <member name="F:ZAdmin.Core.Const.ClaimConst.CLAINM_USERID">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.ClaimConst.CLAINM_ACCOUNT">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.ClaimConst.CLAINM_NAME">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.ClaimConst.CLAINM_SUPERADMIN">
+            <summary>
+            是否超级管理
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.ClaimConst.TENANT_ID">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.ClaimConst.CLAINM_ORGID">
+            <summary>
+            用户组织机构Id
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.ClaimConst.CLAINM_ORGNAME">
+            <summary>
+            用户组织机构名称
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.DEFAULT_PASSWORD">
+            <summary>
+            默认密码
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_USER">
+            <summary>
+            用户缓存
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_MENU">
+            <summary>
+            菜单缓存
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_PERMISSION">
+            <summary>
+            权限缓存
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_DATASCOPE">
+            <summary>
+            数据范围缓存
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_CODE">
+            <summary>
+            验证码缓存
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_ALL">
+            <summary>
+            所有缓存关键字集合
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_TIMER_JOB">
+            <summary>
+            定时任务缓存
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.CACHE_KEY_ONLINE_USER">
+            <summary>
+            在线用户缓存
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Const.CommonConst.SYS_MANAGER_ROLE_CODE">
+            <summary>
+            系统管理员角色编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.UpdatedTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.CreatedUserId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.CreatedUserName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.UpdatedUserId">
+            <summary>
+            修改者Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.UpdatedUserName">
+            <summary>
+            修改者名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.PrivateDEntityBase`1.IsDeleted">
+            <summary>
+            软删除
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.DEntityTenant.TenantId">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.IDataPermissions">
+            <summary>
+            数据权限接口，实现数据权限必须继承本接口
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.IDataPermissions.CreatedUserOrgId">
+            <summary>
+            创建用户部门id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.IDataPermissions.CreatedUserOrgName">
+            <summary>
+            创建用户部门名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.IDataPermissions.CreatedUserId">
+            <summary>
+            创建者Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.IDataPermissions.CreatedUserName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysApp">
+            <summary>
+            系统应用表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysApp.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysApp.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysApp.Active">
+            <summary>
+            是否默认激活（Y-是，N-否）,只能有一个系统默认激活
+            用户登录后默认展示此系统菜单
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysApp.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysApp.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysDictData">
+            <summary>
+            字典值表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictData.TypeId">
+            <summary>
+            字典类型Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictData.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictData.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictData.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictData.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictData.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictData.SysDictType">
+            <summary>
+            所属类型
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysDictType">
+            <summary>
+            字典类型表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictType.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictType.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictType.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictType.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictType.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysDictType.SysDictDatas">
+            <summary>
+            字典数据
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysEmp">
+            <summary>
+            员工表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmp.Id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmp.JobNum">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmp.OrgId">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmp.OrgName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmp.SysPos">
+            <summary>
+            多对多（职位）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmp.SysEmpPos">
+            <summary>
+            多对多中间表（员工-职位）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysEmpExtOrgPos">
+            <summary>
+            员工附属机构职位表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpExtOrgPos.SysEmpId">
+            <summary>
+            员工Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpExtOrgPos.SysEmp">
+            <summary>
+            一对一引用（员工）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpExtOrgPos.SysOrgId">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpExtOrgPos.SysOrg">
+            <summary>
+            一对一引用（机构）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpExtOrgPos.SysPosId">
+            <summary>
+            职位Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpExtOrgPos.SysPos">
+            <summary>
+            一对一引用（职位）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysEmpPos">
+            <summary>
+            员工职位表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpPos.SysEmpId">
+            <summary>
+            员工Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpPos.SysEmp">
+            <summary>
+            一对一引用（员工）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpPos.SysPosId">
+            <summary>
+            职位Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysEmpPos.SysPos">
+            <summary>
+            一对一引用（职位）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysMenu">
+            <summary>
+            菜单表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Pid">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Pids">
+            <summary>
+            父Ids
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Type">
+            <summary>
+            菜单类型（字典 0目录 1菜单 2按钮）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Router">
+            <summary>
+            路由地址
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Component">
+            <summary>
+            组件地址
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Permission">
+            <summary>
+            权限标识
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Application">
+            <summary>
+            应用分类（应用编码）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.OpenType">
+            <summary>
+            打开方式（字典 0无 1组件 2内链 3外链）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Visible">
+            <summary>
+            是否可见（Y-是，N-否）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Link">
+            <summary>
+            内链地址
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Redirect">
+            <summary>
+            重定向地址
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Weight">
+            <summary>
+            权重（字典 1系统权重 2业务权重）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.SysRoles">
+            <summary>
+            多对多（角色）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysMenu.SysRoleMenus">
+            <summary>
+            多对多中间表（用户角色）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysOrg">
+            <summary>
+            组织机构表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Pid">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Pids">
+            <summary>
+            父Ids
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Contacts">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.OrgType">
+            <summary>
+            机构类型
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.SysUsers">
+            <summary>
+            多对多（用户）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.SysUserDataScopes">
+            <summary>
+            多对多中间表（用户数据范围）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.SysRoles">
+            <summary>
+            多对多（角色）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysOrg.SysRoleDataScopes">
+            <summary>
+            多对多中间表（角色数据范围）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysPos">
+            <summary>
+            职位表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysPos.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysPos.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysPos.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysPos.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysPos.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysPos.SysEmps">
+            <summary>
+            多对多（员工）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysPos.SysEmpPos">
+            <summary>
+            多对多中间表（员工职位）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysRole">
+            <summary>
+            角色表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.DataScopeType">
+            <summary>
+            数据范围类型（字典 1全部数据 2本部门及以下数据 3本部门数据 4仅本人数据 5自定义数据）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.RoleType">
+            <summary>
+            角色类型-集团角色_0、加盟商角色_1、门店角色_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.SysUsers">
+            <summary>
+            多对多（用户）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.SysUserRoles">
+            <summary>
+            多对多中间表（用户角色）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.SysOrgs">
+            <summary>
+            多对多（机构）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.SysRoleDataScopes">
+            <summary>
+            多对多中间表（角色-机构 数据范围）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.SysMenus">
+            <summary>
+            多对多（菜单）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRole.SysRoleMenus">
+            <summary>
+            多对多中间表（角色-菜单）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysRoleDataScope">
+            <summary>
+            角色数据范围表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleDataScope.SysRoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleDataScope.SysRole">
+            <summary>
+            一对一引用（系统角色）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleDataScope.SysOrgId">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleDataScope.SysOrg">
+            <summary>
+            一对一引用（系统机构）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysRoleMenu">
+            <summary>
+            角色菜单表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleMenu.SysRoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleMenu.SysRole">
+            <summary>
+            一对一引用（系统用户）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleMenu.SysMenuId">
+            <summary>
+            菜单Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysRoleMenu.SysMenu">
+            <summary>
+            一对一引用（系统菜单）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysTenant">
+            <summary>
+            租户表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.Name">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.AdminName">
+            <summary>
+            管理员名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.Host">
+            <summary>
+            主机
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.Connection">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.Schema">
+            <summary>
+            架构
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysTenant.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysUser">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Password">
+            <summary>
+            密码（默认MD5加密）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Sex">
+            <summary>
+            性别-男_1、女_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Phone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.LastLoginIp">
+            <summary>
+            最后登录IP
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.AdminType">
+            <summary>
+            管理员类型-超级管理员_1、管理员_2、普通账号_3
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.Status">
+            <summary>
+            状态-正常_0、停用_1、删除_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.SysRoles">
+            <summary>
+            多对多（角色）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.SysUserRoles">
+            <summary>
+            多对多中间表（用户-角色）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.SysOrgs">
+            <summary>
+            多对多（机构）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUser.SysUserDataScopes">
+            <summary>
+            多对多中间表（用户-机构 数据范围）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysUserDataScope">
+            <summary>
+            用户数据范围表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserDataScope.SysUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserDataScope.SysUser">
+            <summary>
+            一对一引用（系统用户）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserDataScope.SysOrgId">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserDataScope.SysOrg">
+            <summary>
+            一对一引用（系统机构）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Entity.SysUserRole">
+            <summary>
+            用户角色表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserRole.SysUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserRole.SysUser">
+            <summary>
+            一对一引用（系统用户）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserRole.SysRoleId">
+            <summary>
+            系统角色Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysUserRole.SysRole">
+            <summary>
+            一对一引用（系统角色）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.AdminType">
+            <summary>
+            账号类型
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.AdminType.SuperAdmin">
+            <summary>
+            超级管理员
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.AdminType.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.AdminType.None">
+            <summary>
+            普通账号
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.CommonStatus">
+            <summary>
+            公共状态
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.CommonStatus.ENABLE">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.CommonStatus.DISABLE">
+            <summary>
+            停用
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.CommonStatus.DELETED">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.DataScopeType.ALL">
+            <summary>
+            全部数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.DataScopeType.DEPT_WITH_CHILD">
+            <summary>
+            本部门及以下数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.DataScopeType.DEPT">
+            <summary>
+            本部门数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.DataScopeType.SELF">
+            <summary>
+            仅本人数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.DataScopeType.DEFINE">
+            <summary>
+            自定义数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1000">
+            <summary>
+            用户名或密码不正确
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1001">
+            <summary>
+            非法操作！禁止删除自己
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1002">
+            <summary>
+            记录不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1003">
+            <summary>
+            账号已存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1004">
+            <summary>
+            旧密码不匹配
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1005">
+            <summary>
+            测试数据禁止更改admin密码
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1006">
+            <summary>
+            数据已存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1007">
+            <summary>
+            数据不存在或含有关联引用，禁止删除
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1008">
+            <summary>
+            禁止为管理员分配角色
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1009">
+            <summary>
+            重复数据或记录含有不存在数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1010">
+            <summary>
+            禁止为超级管理员角色分配权限
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1011">
+            <summary>
+            非法数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1012">
+            <summary>
+            Id不能为空
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1013">
+            <summary>
+            所属机构不在自己的数据范围内
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1014">
+            <summary>
+            禁止删除超级管理员
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1015">
+            <summary>
+            禁止修改超级管理员状态
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1016">
+            <summary>
+            没有权限
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1017">
+            <summary>
+            账号已冻结
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1018">
+            <summary>
+            禁止删除管理员
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1019">
+            <summary>
+            禁止删除系统管理员角色(sys_manager_role)
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1020">
+            <summary>
+            禁止修改系统管理员角色(sys_manager_role)
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1021">
+            <summary>
+            禁止为系统管理员角色(sys_manager_role)分配权限
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1022">
+            <summary>
+            禁止为超级管理员分配角色
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1023">
+            <summary>
+            禁止删除默认租户
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D2000">
+            <summary>
+            父机构不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D2001">
+            <summary>
+            当前机构Id不能与父机构Id相同
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D2002">
+            <summary>
+            已有相同组织机构,编码或名称相同
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D2003">
+            <summary>
+            没有权限操作机构
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D2004">
+            <summary>
+            该机构下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D2005">
+            <summary>
+            附属机构下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D2006">
+            <summary>
+            只能增加下级机构
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D3000">
+            <summary>
+            字典类型不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D3001">
+            <summary>
+            字典类型已存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D3002">
+            <summary>
+            字典类型下面有字典值禁止删除
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D3003">
+            <summary>
+            字典值已存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D3004">
+            <summary>
+            字典值不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D3005">
+            <summary>
+            字典状态错误
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4000">
+            <summary>
+            菜单已存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4001">
+            <summary>
+            路由地址为空
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4002">
+            <summary>
+            打开方式为空
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4003">
+            <summary>
+            权限标识格式为空
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4004">
+            <summary>
+            权限标识格式错误
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4005">
+            <summary>
+            权限不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4006">
+            <summary>
+            父级菜单不能为当前节点，请重新选择父级菜单
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D4007">
+            <summary>
+            不能移动根节点
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D5000">
+            <summary>
+            已存在同名或同编码应用
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D5001">
+            <summary>
+            默认激活系统只能有一个
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D5002">
+            <summary>
+            该应用下有菜单禁止删除
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D5003">
+            <summary>
+            已存在同名或同编码应用
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D6000">
+            <summary>
+            已存在同名或同编码职位
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D6001">
+            <summary>
+            该职位下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D7000">
+            <summary>
+            通知公告状态错误
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D7001">
+            <summary>
+            通知公告删除失败
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D7002">
+            <summary>
+            通知公告编辑失败
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D7003">
+            <summary>
+            通知公告操作失败，非发布者不能进行操作
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D8000">
+            <summary>
+            文件不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D8001">
+            <summary>
+            不允许的文件类型
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D8002">
+            <summary>
+            文件超过允许大小
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D9000">
+            <summary>
+            已存在同名或同编码参数配置
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D9001">
+            <summary>
+            禁止删除系统参数
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1100">
+            <summary>
+            已存在同名任务调度
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1101">
+            <summary>
+            任务调度不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1200">
+            <summary>
+            演示环境禁止修改数据
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1300">
+            <summary>
+            已存在同名或同管理员或同主机租户
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1400">
+            <summary>
+            该表代码模板已经生成过
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1501">
+            <summary>
+            该类型不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1502">
+            <summary>
+            该字段不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1503">
+            <summary>
+            该类型不是枚举类型
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1504">
+            <summary>
+            该实体不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.D1505">
+            <summary>
+            父菜单不存在
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.xg1000">
+            <summary>
+            已存在同名或同编码项目
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.xg1001">
+            <summary>
+            已存在相同证件号码人员
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.ErrorCode.xg1002">
+            <summary>
+            检测数据不存在
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Gender.MALE">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Gender.FEMALE">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.Gender.UNKNOWN">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.MenuOpenType">
+            <summary>
+            系统菜单类型
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuOpenType.NONE">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuOpenType.COMPONENT">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuOpenType.INNER">
+            <summary>
+            内链
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuOpenType.OUTER">
+            <summary>
+            外链
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuType.DIR">
+            <summary>
+            目录
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuType.MENU">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuType.BTN">
+            <summary>
+            按钮
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.MenuWeight">
+            <summary>
+            菜单权重
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuWeight.SUPER_ADMIN_WEIGHT">
+            <summary>
+            系统权重
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.MenuWeight.DEFAULT_WEIGHT">
+            <summary>
+            业务权重
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.QueryTypeEnum">
+            <summary>
+            查询类型枚举
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.Equals">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.NotEquals">
+            <summary>
+            不等于
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.GreaterThan">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.GreaterThanOrEquals">
+            <summary>
+            大于等于
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.LessThan">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.LessThanOrEquals">
+            <summary>
+            小于等于
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.StdIn">
+            <summary>
+            在列表中
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.StdNotIn">
+            <summary>
+            不在列表中
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.Contains">
+            <summary>
+            包含
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.NotContains">
+            <summary>
+            不包含
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.StartsWith">
+            <summary>
+            头部包含
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.QueryTypeEnum.EndsWith">
+            <summary>
+            尾部包含
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.RoleTypeEnum">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.RoleTypeEnum.GROUP">
+            <summary>
+            集团角色
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.RoleTypeEnum.JOIN">
+            <summary>
+            加盟商角色
+            </summary>
+        </member>
+        <member name="F:ZAdmin.Core.RoleTypeEnum.STORE">
+            <summary>
+            门店角色
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Extension.LambdaExpressionBuilder">
+            <summary>
+            动态生成查询表达式
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Extension.Condition.Field">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Extension.Condition.Op">
+            <summary>
+            操作符
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Extension.Condition.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Extension.Condition.OrGroup">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Filter.RequestActionFilter">
+            <summary>
+            请求日志拦截
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Options.RefreshTokenSettingOptions.ExpiredTime">
+            <summary>
+            令牌过期时间（分钟）
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.SeedData.SysDictDataSeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            种子数据
+            </summary>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.AuthService">
+            <summary>
+            登录授权相关服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.AuthService.LoginAsync(ZAdmin.Core.Serive.Auth.Dto.LoginInput)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="input"></param>
+            <remarks>默认用户名/密码：admin/admin</remarks>
+            <returns></returns>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Auth.Dto.LoginInput.Account">
+            <summary>
+            用户名
+            </summary>
+            <example>superAdmin</example>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Auth.Dto.LoginInput.Password">
+            <summary>
+            密码
+            </summary>
+            <example>123456</example>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Auth.Dto.RegistInput">
+            <summary>
+            注册输入参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Auth.Dto.RegistInput.Email">
+            <summary>
+            用户名
+            </summary>
+            <example>superAdmin</example>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Auth.Dto.RegistInput.CompanyName">
+            <summary>
+            公司名
+            </summary>
+            <example>superAdmin</example>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Auth.Dto.RegistInput.Password">
+            <summary>
+            密码
+            </summary>
+            <example>123456</example>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.BaseId">
+            <summary>
+            主键Id映射DTO
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Cache.SysCacheService.AddCacheKey(System.String)">
+            <summary>
+            增加缓存Key
+            </summary>
+            <param name="cacheKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Cache.SysCacheService.GetDataScope(System.Int64)">
+            <summary>
+            获取数据范围缓存（机构Id集合）
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Cache.SysCacheService.SetDataScope(System.Int64,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            缓存数据范围（机构Id集合）
+            </summary>
+            <param name="userId"></param>
+            <param name="dataScopes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Dict.Dto.DictDataPageInput">
+            <summary>
+            字典值参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataPageInput.TypeId">
+            <summary>
+            字典类型Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataPageInput.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataPageInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.QueryDictDataListInput.TypeId">
+            <summary>
+            字典类型Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictDataInput.TypeId">
+            <summary>
+            字典类型Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictDataInput.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictDataInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictDataInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictDataInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictDataInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput.Id">
+            <summary>
+            字典值Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput.TypeId">
+            <summary>
+            字典类型Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.ChageStateDictDataInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput">
+            <summary>
+            字典值参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput.Id">
+            <summary>
+            字典Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput.TypeId">
+            <summary>
+            字典类型Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictDataOutput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Dict.Dto.DictTreeOutput">
+            <summary>
+            字典类型与字典值构造的树
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictTreeOutput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictTreeOutput.Pid">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictTreeOutput.Code">
+            <summary>
+            编码-对应字典值的编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictTreeOutput.Name">
+            <summary>
+            名称-对应字典值的value
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictTreeOutput.Children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Dict.Dto.DictTypePageInput">
+            <summary>
+            字典类型参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictTypePageInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DictTypePageInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictTypeInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictTypeInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictTypeInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictTypeInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.AddDictTypeInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictTypeInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictTypeInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictTypeInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictTypeInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictTypeInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.UpdateDictTypeInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.ChangeStateDictTypeInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.ChangeStateDictTypeInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Dict.Dto.DropDownDictTypeInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Dict.SysDictDataService">
+            <summary>
+            字典值服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.GetDictDataListByDictTypeId(System.Int64)">
+            <summary>
+            根据字典类型Id获取字典值集合
+            </summary>
+            <param name="dictTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Dict.SysDictTypeService">
+            <summary>
+            字典类型服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.GetDictTypeDropDown(ZAdmin.Core.Serive.Dict.Dto.DropDownDictTypeInput)">
+            <summary>
+            获取字典类型下所有字典值
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput">
+            <summary>
+            附属机构和职位参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput.OrgId">
+            <summary>
+            附属机构id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput.OrgCode">
+            <summary>
+            附属机构编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput.OrgName">
+            <summary>
+            附属机构名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput.PosId">
+            <summary>
+            附属职位id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput.PosCode">
+            <summary>
+            附属职位编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput.PosName">
+            <summary>
+            附属职位名称
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Emp.Dto.EmpOutput">
+            <summary>
+            员工信息参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput.JobNum">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput.OrgId">
+            <summary>
+            机构id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput.OrgName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput.ExtOrgPos">
+            <summary>
+            机构与职位信息
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput.Positions">
+            <summary>
+            职位信息
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Emp.Dto.EmpOutput2">
+            <summary>
+            员工信息参数2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput2.Id">
+            <summary>
+            员工Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput2.JobNum">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput2.OrgId">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput2.OrgName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput2.ExtIds">
+            <summary>
+            附属机构
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpOutput2.PosIdList">
+            <summary>
+            职位集合
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Emp.Dto.EmpPosOutput">
+            <summary>
+            员工职位参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpPosOutput.PosId">
+            <summary>
+            职位Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpPosOutput.PosCode">
+            <summary>
+            职位编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Emp.Dto.EmpPosOutput.PosName">
+            <summary>
+            职位名称
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpExtOrgPosService.AddOrUpdate(System.Int64,System.Collections.Generic.List{ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput})">
+            <summary>
+            保存或编辑附属机构相关信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpExtOrgPosService.DeleteEmpExtInfoByUserId(System.Int64)">
+            <summary>
+            根据员工Id删除对应的员工-附属信息
+            </summary>
+            <param name="empId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpExtOrgPosService.GetEmpExtOrgPosList(System.Int64)">
+            <summary>
+            获取附属机构和职位信息
+            </summary>
+            <param name="empId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpExtOrgPosService.HasExtOrgEmp(System.Int64)">
+            <summary>
+            根据机构Id判断该附属机构下是否有员工
+            </summary>
+            <param name="orgId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpExtOrgPosService.HasExtPosEmp(System.Int64)">
+            <summary>
+            根据职位Id判断该附属职位下是否有员工
+            </summary>
+            <param name="posId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Emp.SysEmpPosService">
+            <summary>
+            员工职位服务
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Emp.SysEmpService">
+            <summary>
+            员工服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpService.GetEmpInfo(System.Int64)">
+            <summary>
+            获取用户员工相关信息（包括登录）
+            </summary>
+            <param name="empId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpService.HasOrgEmp(System.Int64)">
+            <summary>
+            根据机构Id判断该机构下是否有员工
+            </summary>
+            <param name="orgId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpService.DeleteEmpInfoByUserId(System.Int64)">
+            <summary>
+            根据员工Id删除对应的员工表信息
+            </summary>
+            <param name="empId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpService.GetEmpOrgId(System.Int64)">
+            <summary>
+            获取员工机构Id
+            </summary>
+            <param name="empId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Emp.SysEmpService.HasOrgEmp(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            获取子机构用户
+            </summary>
+            <param name="orgIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Org.Dto.OrgListInput">
+            <summary>
+            组织机构参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgListInput.Pid">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.OrgType">
+            <summary>
+            机构类型-品牌_1、总店(加盟/直营)_2、直营店_3、加盟店_4
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Pid">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Pids">
+            <summary>
+            父Ids
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgAddInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.DeleteOrgInput.Id">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.OrgType">
+            <summary>
+            机构类型-品牌_1、总店(加盟/直营)_2、直营店_3、加盟店_4
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Id">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Pid">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Pids">
+            <summary>
+            父Ids
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.UpdateOrgInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.QueryOrgInput.Id">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgPageInput.OrgType">
+            <summary>
+            机构类型-品牌_1、总店(加盟/直营)_2、直营店_3、加盟店_4
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgPageInput.Pid">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgPageInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode">
+            <summary>
+            组织机构树
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode.ParentId">
+            <summary>
+            父Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode.Weight">
+            <summary>
+            排序，越小优先级越高
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Org.Dto.OrgTreeNode.Pid">
+            <summary>
+            上一级Id
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Org.Dto.SysOrgService">
+            <summary>
+            组织机构服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Org.Dto.SysOrgService.GetDataScopeListByDataScopeType(System.Int32,System.Int64)">
+            <summary>
+            根据数据范围类型获取当前用户的数据范围（机构Id）集合
+            </summary>
+            <param name="dataScopeType"></param>
+            <param name="orgId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Org.Dto.SysOrgService.GetChildIdListWithSelfById(System.Int64)">
+            <summary>
+            根据节点Id获取所有子节点Id集合，包含自己
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Org.Dto.SysOrgService.GetOrgTree">
+            <summary>
+            获取组织机构树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Org.Dto.SysOrgService.GetDataScopeList(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            (非管理员)获取当前用户数据范围（机构Id）
+            </summary>
+            <param name="dataScopes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Role.Dto.RoleInput">
+            <summary>
+            角色参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RoleInput.RoleType">
+            <summary>
+            角色类型-集团角色_0、加盟商角色_1、门店角色_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RoleInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RoleInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RolePageInput.RoleType">
+            <summary>
+            角色类型-集团角色_0、加盟商角色_1、门店角色_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RolePageInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RolePageInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.AddRoleInput.RoleType">
+            <summary>
+            角色类型-集团角色_0、加盟商角色_1、门店角色_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.AddRoleInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.AddRoleInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.AddRoleInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.AddRoleInput.DataScopeType">
+            <summary>
+            数据范围类型（字典 1全部数据 2本部门及以下数据 3本部门数据 4仅本人数据 5自定义数据）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.AddRoleInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.UpdateRoleInput.RoleType">
+            <summary>
+            角色类型-集团角色_0、加盟商角色_1、门店角色_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.UpdateRoleInput.Id">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.UpdateRoleInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.UpdateRoleInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.UpdateRoleInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.UpdateRoleInput.DataScopeType">
+            <summary>
+            数据范围类型（字典 1全部数据 2本部门及以下数据 3本部门数据 4仅本人数据 5自定义数据）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.UpdateRoleInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleMenuInput.Id">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleMenuInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleMenuInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleMenuInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleMenuInput.DataScopeType">
+            <summary>
+            数据范围类型（字典 1全部数据 2本部门及以下数据 3本部门数据 4仅本人数据 5自定义数据）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleMenuInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleDataInput.Id">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleDataInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleDataInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleDataInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleDataInput.DataScopeType">
+            <summary>
+            数据范围类型（字典 1全部数据 2本部门及以下数据 3本部门数据 4仅本人数据 5自定义数据）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.GrantRoleDataInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RoleOutput.RoleType">
+            <summary>
+            角色类型-集团角色_0、加盟商角色_1、门店角色_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RoleOutput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RoleOutput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Role.Dto.RoleOutput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Role.SysRoleDataScopeService.GrantDataScope(ZAdmin.Core.Serive.Role.Dto.GrantRoleDataInput)">
+            <summary>
+            授权角色数据范围
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Role.SysRoleDataScopeService.GetRoleDataScopeIdList(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            根据角色Id集合获取角色数据范围集合
+            </summary>
+            <param name="roleIdList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Role.SysRoleDataScopeService.DeleteRoleDataScopeListByOrgIdList(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            根据机构Id集合删除对应的角色-数据范围关联信息
+            </summary>
+            <param name="orgIdList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Role.SysRoleDataScopeService.DeleteRoleDataScopeListByRoleId(System.Int64)">
+            <summary>
+            根据角色Id删除对应的角色-数据范围关联信息
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.Role.SysRoleService">
+            <summary>
+            角色服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Role.SysRoleService.GetUserDataScopeIdList(System.Collections.Generic.List{System.Int64},System.Int64)">
+            <summary>
+            根据角色Id集合获取数据范围Id集合
+            </summary>
+            <param name="roleIdList"></param>
+            <param name="orgId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.User.CurrentUserInfo">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.CurrentUserInfo.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.CurrentUserInfo.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.CurrentUserInfo.IsSuperAdmin">
+            <summary>
+            是否超级管理员
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.User.Dto.UserPageInput">
+            <summary>
+            用户参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Sex">
+            <summary>
+            性别-男_1、女_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Phone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.Status">
+            <summary>
+            状态-正常_0、停用_1、删除_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.SysEmpParam">
+            <summary>
+            员工信息
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserPageInput.SearchStatus">
+            <summary>
+            搜索状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.DeleteUserInput.SysEmpParam">
+            <summary>
+            员工信息
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UpdateUserStatusInput.Status">
+            <summary>
+            状态-正常_0、停用_1、删除_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UpdateUserRoleDataInput.SysEmpParam">
+            <summary>
+            员工信息
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.User.Dto.UserOutput">
+            <summary>
+            用户参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Sex">
+            <summary>
+            性别-男_1、女_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Phone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.Status">
+            <summary>
+            状态-正常_0、停用_1、删除_2
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.User.Dto.UserOutput.SysEmpInfo">
+            <summary>
+            员工信息
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserDataScopeService.GetUserDataScopeIdList(System.Int64)">
+            <summary>
+            获取用户的数据范围Id集合
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.User.SysUserRoleService">
+            <summary>
+            用户角色服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserRoleService.GetUserRoleIdList(System.Int64,System.Boolean)">
+            <summary>
+            获取用户的角色Id集合
+            </summary>
+            <param name="userId"></param>
+            <param name="checkRoleStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.User.SysUserService">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserService.ChangeUserStatus(ZAdmin.Core.Serive.User.Dto.UpdateUserStatusInput)">
+            <summary>
+            修改用户状态
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserService.DeleteUser(ZAdmin.Core.Serive.User.Dto.DeleteUserInput)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserService.GetUserDataScopeIdList">
+            <summary>
+            获取用户数据范围（机构Id集合）并缓存
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserService.GetUserDataScopeIdList(System.Int64)">
+            <summary>
+            获取用户数据范围（机构Id集合）并缓存
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserService.QueryUserPageList(ZAdmin.Core.Serive.User.Dto.UserPageInput)">
+            <summary>
+            分页查询用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserService.ResetUserPwd(ZAdmin.Core.Serive.User.Dto.QueryUserInput)">
+            <summary>
+            重置用户密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.User.SysUserService.CheckDataScope(System.String)">
+            <summary>
+            检查普通用户数据范围
+            当有用户有多个组织时，在登录时选择一个组织，所以组织id（orgId）从前端传过来
+            </summary>
+            <param name="orgId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Util.IPUtil.GetRequestIPv4(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取请求的ip4
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Util.ITreeNode">
+            <summary>
+            树基类
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Util.ITreeNode.GetId">
+            <summary>
+            获取节点id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Util.ITreeNode.GetPid">
+            <summary>
+            获取节点父id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Util.ITreeNode.SetChildren(System.Collections.IList)">
+            <summary>
+            设置Children
+            </summary>
+            <param name="children"></param>
+        </member>
+        <member name="T:ZAdmin.Core.Util.TreeBuildUtil`1">
+            <summary>
+            递归工具类，用于遍历有父子关系的节点，例如菜单树，字典树等等
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:ZAdmin.Core.Util.TreeBuildUtil`1._rootParentId">
+            <summary>
+            顶级节点的父节点Id(默认0)
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Util.TreeBuildUtil`1.SetRootParentId(System.Int64)">
+            <summary>
+            设置根节点方法
+            查询数据可以设置其他节点为根节点，避免父节点永远是0，查询不到数据的问题
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Util.TreeBuildUtil`1.Build(System.Collections.Generic.List{`0})">
+            <summary>
+            构造树节点
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Util.TreeBuildUtil`1.BuildChildNodes(System.Collections.Generic.List{`0},`0,System.Collections.Generic.List{`0})">
+            <summary>
+            构造子节点集合
+            </summary>
+            <param name="totalNodes"></param>
+            <param name="node"></param>
+            <param name="childNodeList"></param>
+        </member>
+        <member name="T:ZAdmin.Core.Util.IXnInputBase">
+            <summary>
+            通用输入扩展参数（带权限）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.IXnInputBase.GrantMenuIdList">
+            <summary>
+            授权菜单
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.IXnInputBase.GrantRoleIdList">
+            <summary>
+            授权角色
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.IXnInputBase.GrantOrgIdList">
+            <summary>
+            授权数据
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Util.PageInputBase">
+            <summary>
+            通用分页输入参数
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.SearchValue">
+            <summary>
+            搜索值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.PageNo">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.PageSize">
+            <summary>
+            页码容量
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.SearchBeginTime">
+            <summary>
+            搜索开始时间
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.SearchEndTime">
+            <summary>
+            搜索结束时间
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.SortOrder">
+            <summary>
+            排序方法,默认升序,否则降序(配合antd前端,约定参数为 Ascend,Dscend)
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.DescStr">
+            <summary>
+            降序排序(不要问我为什么是descend不是desc，前端约定参数就是这样)
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.PageInputBase.SearchParameters">
+            <summary>
+            复杂查询条件
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Util.PagedUtil.ToADPagedListAsync``1(System.Linq.IQueryable{``0},System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            分页拓展
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entities"></param>
+            <param name="pageIndex">页码，必须大于0</param>
+            <param name="pageSize"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Util.XnRestfulResultProvider">
+            <summary>
+            规范化RESTful风格返回值
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Util.XnRestfulResultProvider.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext,Furion.UnifyResult.Internal.ExceptionMetadata)">
+            <summary>
+            异常返回值
+            </summary>
+            <param name="context"></param>
+            <param name="metadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Util.XnRestfulResultProvider.OnSucceeded(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext,System.Object)">
+            <summary>
+            成功返回值
+            </summary>
+            <param name="context"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Util.XnRestfulResultProvider.OnValidateFailed(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Furion.DataValidation.ValidationMetadata)">
+            <summary>
+            验证失败返回值
+            </summary>
+            <param name="context"></param>
+            <param name="metadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Util.XnRestfulResultProvider.OnResponseStatusCodes(Microsoft.AspNetCore.Http.HttpContext,System.Int32,Furion.UnifyResult.UnifyResultSettingsOptions)">
+            <summary>
+            处理输出状态码
+            </summary>
+            <param name="context"></param>
+            <param name="statusCode"></param>
+            <param name="unifyResultSettings"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Util.XnRestfulResult`1">
+            <summary>
+            RESTful风格---XIAONUO返回格式
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ZAdmin.Core.Util.XnRestfulResult`1.Success">
+            <summary>
+            执行成功
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.XnRestfulResult`1.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.XnRestfulResult`1.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.XnRestfulResult`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.XnRestfulResult`1.Extras">
+            <summary>
+            附加数据
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Util.XnRestfulResult`1.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+    </members>
+</doc>

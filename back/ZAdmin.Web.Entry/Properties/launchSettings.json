@@ -1,0 +1,47 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:44348",
+      "sslPort": 44347
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "ZAdmin.Web.Entry": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Development-ZAdmin": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5566",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development" //这里对应配置文件 比如：appsettings.Development.json
+      }
+    },
+    //生产环境-自定义
+    "Production-ZAdmin.NET": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5566",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production" //对应 appsettings.json  dbsettings.json
+      }
+    }
+  }
+}
