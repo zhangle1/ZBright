@@ -5106,11 +5106,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
+      "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
       "projectName": "ZAdmin.EntityFramework.Core",
-      "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
+      "projectPath": "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\obj\\",
+      "outputPath": "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vs\\Shared\\NuGetPackages",
@@ -5132,8 +5132,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj": {
-              "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj"
+            "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj": {
+              "projectPath": "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj"
             }
           }
         }

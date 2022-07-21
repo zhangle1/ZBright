@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pwY7DB8N34fuSm9bzpYGpet8IhZ+Skpi82KXr7ggRM2LQO5sL7CVEECLV3UeE8uqv8wAiDcmDu4G66nSrp85Eg==",
+  "dgSpecHash": "nzjhTyKmC9PfvenLVfw/MZGLhcJtpbmy3Tw+X5/0juRN51715YpzCkNhspni82jB8HmjFDsd/OyY5fP3rNsXrA==",
   "success": true,
-  "projectFilePath": "D:\\ZBright\\ZAdmin\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj",
+  "projectFilePath": "D:\\ZBright\\back\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\ben.demystifier\\0.4.1\\ben.demystifier.0.4.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\furion\\3.0.6\\furion.3.0.6.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj": {}
+    "D:\\ZBright\\back\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj": {}
   },
   "projects": {
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Application\\ZAdmin.Application.csproj": {
+    "D:\\ZBright\\back\\ZAdmin.Application\\ZAdmin.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.Application\\ZAdmin.Application.csproj",
+        "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.Application\\ZAdmin.Application.csproj",
         "projectName": "ZAdmin.Application",
-        "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Application\\ZAdmin.Application.csproj",
+        "projectPath": "D:\\ZBright\\back\\ZAdmin.Application\\ZAdmin.Application.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Application\\obj\\",
+        "outputPath": "D:\\ZBright\\back\\ZAdmin.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs\\Shared\\NuGetPackages",
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj": {
-                "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj"
+              "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj": {
+                "projectPath": "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj"
               }
             }
           }
@@ -67,14 +67,14 @@
         }
       }
     },
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj": {
+    "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj",
+        "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj",
         "projectName": "ZAdmin.Core",
-        "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj",
+        "projectPath": "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\obj\\",
+        "outputPath": "D:\\ZBright\\back\\ZAdmin.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs\\Shared\\NuGetPackages",
@@ -156,14 +156,14 @@
         }
       }
     },
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj": {
+    "D:\\ZBright\\back\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj",
+        "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj",
         "projectName": "ZAdmin.Database.Migrations",
-        "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj",
+        "projectPath": "D:\\ZBright\\back\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Database.Migrations\\obj\\",
+        "outputPath": "D:\\ZBright\\back\\ZAdmin.Database.Migrations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs\\Shared\\NuGetPackages",
@@ -185,8 +185,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj": {
-                "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj"
+              "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj": {
+                "projectPath": "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj"
               }
             }
           }
@@ -219,14 +219,14 @@
         }
       }
     },
-    "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj": {
+    "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
+        "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
         "projectName": "ZAdmin.EntityFramework.Core",
-        "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
+        "projectPath": "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\ZAdmin.EntityFramework.Core.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.EntityFramework.Core\\obj\\",
+        "outputPath": "D:\\ZBright\\back\\ZAdmin.EntityFramework.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs\\Shared\\NuGetPackages",
@@ -248,8 +248,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj": {
-                "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj"
+              "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj": {
+                "projectPath": "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj"
               }
             }
           }
@@ -288,14 +288,14 @@
         }
       }
     },
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj": {
+    "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj",
+        "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj",
         "projectName": "ZAdmin.Web.Core",
-        "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj",
+        "projectPath": "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\obj\\",
+        "outputPath": "D:\\ZBright\\back\\ZAdmin.Web.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs\\Shared\\NuGetPackages",
@@ -317,11 +317,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\ZBright\\ZAdmin\\ZAdmin.Application\\ZAdmin.Application.csproj": {
-                "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Application\\ZAdmin.Application.csproj"
+              "D:\\ZBright\\back\\ZAdmin.Application\\ZAdmin.Application.csproj": {
+                "projectPath": "D:\\ZBright\\back\\ZAdmin.Application\\ZAdmin.Application.csproj"
               },
-              "D:\\ZBright\\ZAdmin\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj": {
-                "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj"
+              "D:\\ZBright\\back\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj": {
+                "projectPath": "D:\\ZBright\\back\\ZAdmin.Database.Migrations\\ZAdmin.Database.Migrations.csproj"
               }
             }
           }
@@ -354,14 +354,14 @@
         }
       }
     },
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj": {
+    "D:\\ZBright\\back\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
+        "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
         "projectName": "ZAdmin.Web.Entry",
-        "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
+        "projectPath": "D:\\ZBright\\back\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\obj\\",
+        "outputPath": "D:\\ZBright\\back\\ZAdmin.Web.Entry\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs\\Shared\\NuGetPackages",
@@ -383,8 +383,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj": {
-                "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj"
+              "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj": {
+                "projectPath": "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj"
               }
             }
           }

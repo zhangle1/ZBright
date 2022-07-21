@@ -1,0 +1,20 @@
+export type MenuEntity={
+    id: number,
+    pid: number,
+    name: string,
+    code: string,
+    type: number,
+    icon: string,
+    router: string,
+    component: string,
+    permission: string,
+    application: string,
+    openType: number,
+    visible: string,
+    link: string,
+    redirect: string,
+    weight: number,
+    sort: number,
+    remark: string,
+    children: MenuEntity[]
+}

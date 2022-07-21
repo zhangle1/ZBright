@@ -5272,11 +5272,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
+      "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
       "projectName": "ZAdmin.Web.Entry",
-      "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
+      "projectPath": "D:\\ZBright\\back\\ZAdmin.Web.Entry\\ZAdmin.Web.Entry.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Entry\\obj\\",
+      "outputPath": "D:\\ZBright\\back\\ZAdmin.Web.Entry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\vs\\Shared\\NuGetPackages",
@@ -5298,8 +5298,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj": {
-              "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj"
+            "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj": {
+              "projectPath": "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj"
             }
           }
         }

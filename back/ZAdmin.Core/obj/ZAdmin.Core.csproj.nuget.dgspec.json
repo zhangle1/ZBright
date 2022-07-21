@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj": {}
+    "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj": {}
   },
   "projects": {
-    "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj": {
+    "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj",
+        "projectUniqueName": "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj",
         "projectName": "ZAdmin.Core",
-        "projectPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\ZAdmin.Core.csproj",
+        "projectPath": "D:\\ZBright\\back\\ZAdmin.Core\\ZAdmin.Core.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\ZBright\\ZAdmin\\ZAdmin.Core\\obj\\",
+        "outputPath": "D:\\ZBright\\back\\ZAdmin.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\vs\\Shared\\NuGetPackages",

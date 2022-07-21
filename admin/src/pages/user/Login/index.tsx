@@ -57,12 +57,9 @@ const Login: React.FC = () => {
       // 登录
       const { setDataToStorage, getDataFromStorage } = doLocalStorage();
 
-      console.log("第三方登录")
       const msg = await login({ ...loginParam, type });
-      console.log("第三方登录完成")
 
       const authMsg = await myLogin({ ...values })
-      console.log("我的登录完成")
 
       if (authMsg.code == 200) {
 

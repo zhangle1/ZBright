@@ -8,25 +8,25 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ZAdmin.Web.Entry
 build_property.RootNamespace = ZAdmin.Web.Entry
-build_property.ProjectDir = D:\ZBright\ZAdmin\ZAdmin.Web.Entry\
+build_property.ProjectDir = D:\ZBright\back\ZAdmin.Web.Entry\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\ZBright\ZAdmin\ZAdmin.Web.Entry
+build_property.MSBuildProjectDirectory = D:\ZBright\back\ZAdmin.Web.Entry
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/ZBright/ZAdmin/ZAdmin.Web.Entry/Views/Home/Index.cshtml]
+[D:/ZBright/back/ZAdmin.Web.Entry/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ZBright/ZAdmin/ZAdmin.Web.Entry/Views/Shared/_Layout.cshtml]
+[D:/ZBright/back/ZAdmin.Web.Entry/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ZBright/ZAdmin/ZAdmin.Web.Entry/Views/_ViewImports.cshtml]
+[D:/ZBright/back/ZAdmin.Web.Entry/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ZBright/ZAdmin/ZAdmin.Web.Entry/Views/_ViewStart.cshtml]
+[D:/ZBright/back/ZAdmin.Web.Entry/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

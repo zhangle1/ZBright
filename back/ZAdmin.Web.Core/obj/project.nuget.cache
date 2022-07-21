@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f0igQBaMu/IrzrTS6B77ngZPflwvpUU8tXsilSbdQ/8uXnZBiwtfRrNJAUmZcY1YmvpIea8nW7qCaYSEHsVk8g==",
+  "dgSpecHash": "jvIkuaaOpdILkOMFb1KWya83TvFIjYtYJwdXxVjA7U5vq3+hX3GvyFp7ox40AZ4vMxX0SQtY62D/DeS2eup2yQ==",
   "success": true,
-  "projectFilePath": "D:\\ZBright\\ZAdmin\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj",
+  "projectFilePath": "D:\\ZBright\\back\\ZAdmin.Web.Core\\ZAdmin.Web.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\ben.demystifier\\0.4.1\\ben.demystifier.0.4.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\furion\\3.0.6\\furion.3.0.6.nupkg.sha512",
