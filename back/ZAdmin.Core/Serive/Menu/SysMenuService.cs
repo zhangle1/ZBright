@@ -248,8 +248,8 @@ namespace ZAdmin.Core.Serive.Menu
             await menu.InsertAsync();
 
             // 清除缓存
-            await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_MENU);
-            await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_PERMISSION);
+            //await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_MENU);
+            //await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_PERMISSION);
         }
 
         /// <summary>
@@ -272,8 +272,8 @@ namespace ZAdmin.Core.Serive.Menu
             await _sysRoleMenuService.DeleteRoleMenuListByMenuIdList(childIdList);
 
             // 清除缓存
-            await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_MENU);
-            await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_PERMISSION);
+            //await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_MENU);
+            //await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_PERMISSION);
         }
 
         /// <summary>
@@ -360,8 +360,8 @@ namespace ZAdmin.Core.Serive.Menu
             await oldMenu.UpdateAsync(ignoreNullValues: true);
 
             // 清除缓存
-            await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_MENU);
-            await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_PERMISSION);
+            //await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_MENU);
+            //await _sysCacheService.DelByPatternAsync(CommonConst.CACHE_KEY_PERMISSION);
         }
 
         /// <summary>

@@ -113,13 +113,6 @@ const UserPermissionList: React.FC = () => {
             title: '操作',
             dataIndex: 'option',
             valueType: 'option',
-            // render: (dom, entity) => [
-            //     // eslint-disable-next-line react/jsx-key
-            //     <Button onClick={() => {
-            //         pageEvent.editUser(entity)
-            //     }}>编辑</Button>,
-
-            // ],
             render: (dom, entity) => [
                 // eslint-disable-next-line react/jsx-key
                 <ActionButtonContainer scheme
