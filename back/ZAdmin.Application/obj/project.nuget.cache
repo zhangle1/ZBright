@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "p+E/719uM11ddniRlp3wmHIlb/g1aVxtKK5bTLEZ//ziN1icJoksDifu2aNoNXZ5SlaDMU+5hIFY5msuW89ydA==",
+  "dgSpecHash": "zx6gRmRpiDDbGgxu+knLBzx90xL5B3f8+8GcdDOBgnPQPs5u7fVR4mijDnBQYjpefiGnZWYYX0MM7rHJZRFdkQ==",
   "success": true,
   "projectFilePath": "D:\\ZBright\\back\\ZAdmin.Application\\ZAdmin.Application.csproj",
   "expectedPackageFiles": [
@@ -72,6 +72,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.linq.dynamic.core\\1.2.19\\system.linq.dynamic.core.1.2.19.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",

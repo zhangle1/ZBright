@@ -220,3 +220,4 @@ D:\ZBright\back\ZAdmin.Web.Entry\obj\Debug\net6.0\refint\ZAdmin.Web.Entry.dll
 D:\ZBright\back\ZAdmin.Web.Entry\obj\Debug\net6.0\ZAdmin.Web.Entry.pdb
 D:\ZBright\back\ZAdmin.Web.Entry\obj\Debug\net6.0\ZAdmin.Web.Entry.genruntimeconfig.cache
 D:\ZBright\back\ZAdmin.Web.Entry\obj\Debug\net6.0\ref\ZAdmin.Web.Entry.dll
+D:\ZBright\back\ZAdmin.Web.Entry\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll

@@ -190,6 +190,56 @@
             排序
             </summary>
         </member>
+        <member name="T:ZAdmin.Core.Entity.SysConfig">
+            <summary>
+            参数配置表
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysConfig.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysConfig.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysConfig.Value">
+            <summary>
+            属性值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysConfig.SysFlag">
+            <summary>
+            是否是系统参数（Y-是，N-否）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysConfig.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysConfig.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Entity.SysConfig.GroupCode">
+            <summary>
+            常量所属分类的编码，来自于“常量的分类”字典
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Entity.SysConfig.OnChanged(ZAdmin.Core.Entity.SysConfig,ZAdmin.Core.Entity.SysConfig,Microsoft.EntityFrameworkCore.DbContext,System.Type,Microsoft.EntityFrameworkCore.EntityState)">
+            <summary>
+            监听实体更改之后
+            </summary>
+            <param name="newEntity"></param>
+            <param name="oldEntity"></param>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <param name="state"></param>
+        </member>
         <member name="T:ZAdmin.Core.Entity.SysDictData">
             <summary>
             字典值表
@@ -1875,6 +1925,14 @@
             令牌过期时间（分钟）
             </summary>
         </member>
+        <member name="M:ZAdmin.Core.SeedData.SysConfigSeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            种子数据
+            </summary>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <returns></returns>
+        </member>
         <member name="M:ZAdmin.Core.SeedData.SysDictDataSeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
             <summary>
             种子数据
@@ -2224,6 +2282,169 @@
              <param name="cacheKey"></param>
              <returns></returns>
         </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.ConfigPageInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.ConfigPageInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.ConfigPageInput.GroupCode">
+            <summary>
+            常量所属分类的编码，来自于“常量的分类”字典
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.AddConfigInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.AddConfigInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.AddConfigInput.Value">
+            <summary>
+            属性值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.AddConfigInput.SysFlag">
+            <summary>
+            是否是系统参数（Y-是，N-否）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.AddConfigInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.AddConfigInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.AddConfigInput.GroupCode">
+            <summary>
+            常量所属分类的编码，来自于“常量的分类”字典
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.Id">
+            <summary>
+            应用Id
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.Value">
+            <summary>
+            属性值
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.SysFlag">
+            <summary>
+            是否是系统参数（Y-是，N-否）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.Status">
+            <summary>
+            状态（字典 0正常 1停用 2删除）
+            </summary>
+        </member>
+        <member name="P:ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput.GroupCode">
+            <summary>
+            常量所属分类的编码，来自于“常量的分类”字典
+            </summary>
+        </member>
+        <member name="T:ZAdmin.Core.Serive.SysConfigService">
+            <summary>
+            系统参数配置服务
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.QueryConfigPageList(ZAdmin.Core.Serive.Config.Dto.ConfigPageInput)">
+            <summary>
+            分页获取系统参数配置
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.GetConfigList">
+            <summary>
+            获取系统参数配置列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.AddConfig(ZAdmin.Core.Serive.Config.Dto.AddConfigInput)">
+            <summary>
+            增加系统参数配置
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.DeleteConfig(ZAdmin.Core.Serive.Config.Dto.DeleteConfigInput)">
+            <summary>
+            删除系统参数配置
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.UpdateConfig(ZAdmin.Core.Serive.Config.Dto.UpdateConfigInput)">
+            <summary>
+            更新系统参数配置
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.GetConfig(ZAdmin.Core.Serive.Config.Dto.QueryConfigInput)">
+            <summary>
+            获取系统参数配置
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.GetConfigCache(System.String)">
+            <summary>
+            获取配置信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.UpdateConfigCache(System.String,System.String)">
+            <summary>
+            更新配置缓存
+            </summary>
+            <param name="code"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.GetDemoEnvFlag">
+            <summary>
+            获取演示环境开关是否开启，默认为false
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.SysConfigService.GetCaptchaOpenFlag">
+            <summary>
+            获取验证码开关标识
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:ZAdmin.Core.Serive.Dict.Dto.DictDataPageInput">
             <summary>
             字典值参数
@@ -2479,6 +2700,54 @@
             字典值服务
             </summary>
         </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.QueryDictDataPageList(ZAdmin.Core.Serive.Dict.Dto.DictDataPageInput)">
+            <summary>
+            分页查询字典值
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.GetDictDataList(ZAdmin.Core.Serive.Dict.Dto.QueryDictDataListInput)">
+            <summary>
+            获取某个字典类型下字典值列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.AddDictData(ZAdmin.Core.Serive.Dict.Dto.AddDictDataInput)">
+            <summary>
+            增加字典值
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.DeleteDictData(ZAdmin.Core.Serive.Dict.Dto.DeleteDictDataInput)">
+            <summary>
+            删除字典值
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.UpdateDictData(ZAdmin.Core.Serive.Dict.Dto.UpdateDictDataInput)">
+            <summary>
+            更新字典值
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.GetDictData(ZAdmin.Core.Serive.Dict.Dto.QueryDictDataInput)">
+            <summary>
+            字典值详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.ChangeDictDataStatus(ZAdmin.Core.Serive.Dict.Dto.ChageStateDictDataInput)">
+            <summary>
+            修改字典值状态
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
         <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.GetDictDataListByDictTypeId(System.Int64)">
             <summary>
             根据字典类型Id获取字典值集合
@@ -2486,16 +2755,75 @@
             <param name="dictTypeId"></param>
             <returns></returns>
         </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictDataService.DeleteByTypeId(System.Int64)">
+            <summary>
+            删除字典下所有值
+            </summary>
+            <param name="dictTypeId"></param>
+        </member>
         <member name="T:ZAdmin.Core.Serive.Dict.SysDictTypeService">
             <summary>
             字典类型服务
             </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.QueryDictTypePageList(ZAdmin.Core.Serive.Dict.Dto.DictTypePageInput)">
+            <summary>
+            分页查询字典类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.GetDictTypeList">
+            <summary>
+            获取字典类型列表
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.GetDictTypeDropDown(ZAdmin.Core.Serive.Dict.Dto.DropDownDictTypeInput)">
             <summary>
             获取字典类型下所有字典值
             </summary>
             <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.AddDictType(ZAdmin.Core.Serive.Dict.Dto.AddDictTypeInput)">
+            <summary>
+            添加字典类型
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.DeleteDictType(ZAdmin.Core.Serive.Dict.Dto.DeleteDictTypeInput)">
+            <summary>
+            删除字典类型
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.UpdateDictType(ZAdmin.Core.Serive.Dict.Dto.UpdateDictTypeInput)">
+            <summary>
+            更新字典类型
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.GetDictType(ZAdmin.Core.Serive.Dict.Dto.QueryDictTypeInfoInput)">
+            <summary>
+            字典类型详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.ChangeDictTypeStatus(ZAdmin.Core.Serive.Dict.Dto.ChangeStateDictTypeInput)">
+            <summary>
+            更新字典类型状态
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZAdmin.Core.Serive.Dict.SysDictTypeService.GetDictTree">
+            <summary>
+            字典类型与字典值构造的字典树
+            </summary>
             <returns></returns>
         </member>
         <member name="T:ZAdmin.Core.Serive.Emp.Dto.EmpExtOrgPosOutput">
@@ -4401,6 +4729,20 @@
             <param name="pageSize"></param>
             <param name="cancellationToken"></param>
             <returns></returns>
+        </member>
+        <member name="T:ZAdmin.Core.Util.PageInputOrder">
+            <summary>
+            列表通用排序
+            </summary>
+        </member>
+        <member name="M:ZAdmin.Core.Util.PageInputOrder.OrderBuilder``1(``0,System.String,System.Boolean)">
+            <summary>
+            排序方式(默认降序)
+            </summary>
+            <param name="pageInput"> </param>
+            <param name="defualtSortField"> 默认排序字段 </param>
+            <param name="descSort"> 是否降序 </param>
+            <returns> </returns>
         </member>
         <member name="T:ZAdmin.Core.Util.XnRestfulResultProvider">
             <summary>

@@ -1,6 +1,9 @@
 ﻿using Furion.DatabaseAccessor;
+using Furion.DatabaseAccessor.Extensions;
 using Furion.DependencyInjection;
 using Furion.DynamicApiController;
+using Furion.FriendlyException;
+using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ZAdmin.Core.Entity;
 using ZAdmin.Core.Serive.Dict.Dto;
+using ZAdmin.Core.Serive.User;
 using ZAdmin.Core.Util;
 
 namespace ZAdmin.Core.Serive.Dict
@@ -25,41 +29,132 @@ namespace ZAdmin.Core.Serive.Dict
 
         private readonly IRepository<SysDictData> _sysDictDataRep;  // 字典类型表仓储
 
+
         public SysDictDataService(IRepository<SysDictData> sysDictDataRep)
         {
             _sysDictDataRep = sysDictDataRep;
         }
 
-        public Task AddDictData(AddDictDataInput input)
+        /// <summary>
+        /// 分页查询字典值
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpGet("/sysDictData/page")]
+        public async Task<PageResult<DictDataOutput>> QueryDictDataPageList([FromQuery] DictDataPageInput input)
         {
-            throw new NotImplementedException();
+            bool supperAdmin = CurrentUserInfo.IsSuperAdmin;
+            var code = !string.IsNullOrEmpty(input.Code?.Trim());
+            var value = !string.IsNullOrEmpty(input.Value?.Trim());
+            var dictDatas = await _sysDictDataRep.DetachedEntities
+                                  .Where(u => u.TypeId == input.TypeId)
+                                  .Where((code, u => EF.Functions.Like(u.Code, $"%{input.Code.Trim()}%")),
+                                         (value, u => EF.Functions.Like(u.Value, $"%{input.Value.Trim()}%")))
+                                  .Where(u => (u.Status != CommonStatus.DELETED && !supperAdmin) || (u.Status <= CommonStatus.DELETED && supperAdmin))
+                                  .OrderBy(u => u.Sort)
+                                  .ProjectToType<DictDataOutput>()
+                                  .ToADPagedListAsync(input.PageNo, input.PageSize);
+            return dictDatas;
         }
 
-        public Task ChangeDictDataStatus(ChageStateDictDataInput input)
+
+        /// <summary>
+        /// 获取某个字典类型下字典值列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("/sysDictData/list")]
+        public async Task<List<SysDictData>> GetDictDataList([FromQuery] QueryDictDataListInput input)
         {
-            throw new NotImplementedException();
+            return await _sysDictDataRep.DetachedEntities.Where(u => u.TypeId == input.TypeId)
+                .Where(u => u.Status != CommonStatus.DELETED)
+                .OrderBy(u => u.Sort)
+                .ToListAsync();
         }
 
-        public Task DeleteByTypeId(long dictTypeId)
+
+        /// <summary>
+        /// 增加字典值
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("/sysDictData/add")]
+        public async Task AddDictData(AddDictDataInput input)
         {
-            throw new NotImplementedException();
+            var isExist = await _sysDictDataRep.AnyAsync(u => (u.Code == input.Code || u.Value == input.Value) && u.TypeId == input.TypeId, false);
+            if (isExist) throw Oops.Oh(ErrorCode.D3003);
+
+            var dictData = input.Adapt<SysDictData>();
+            await _sysDictDataRep.InsertAsync(dictData);
         }
 
-        public Task DeleteDictData(DeleteDictDataInput input)
+        /// <summary>
+        /// 删除字典值
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("/sysDictData/delete")]
+        public async Task DeleteDictData(DeleteDictDataInput input)
         {
-            throw new NotImplementedException();
+            var dictData = await _sysDictDataRep.FirstOrDefaultAsync(u => u.Id == input.Id);
+            if (dictData == null) throw Oops.Oh(ErrorCode.D3004);
+            if (dictData.Status == CommonStatus.DELETED)
+            {
+                await dictData.DeleteAsync();
+            }
+            else
+            {
+                dictData.Status = CommonStatus.DELETED;
+                dictData.IsDeleted = true;
+            }
         }
 
-        public Task<SysDictData> GetDictData([FromQuery] QueryDictDataInput input)
+        /// <summary>
+        /// 更新字典值
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("/sysDictData/edit")]
+        public async Task UpdateDictData(UpdateDictDataInput input)
         {
-            throw new NotImplementedException();
+            var isExist = await _sysDictDataRep.AnyAsync(u => u.Id == input.Id, false);
+            if (!isExist) throw Oops.Oh(ErrorCode.D3004);
+
+            // 排除自己并且判断与其他是否相同
+            isExist = await _sysDictDataRep.AnyAsync(u => (u.Value == input.Value || u.Code == input.Code) && u.TypeId == input.TypeId && u.Id != input.Id, false);
+            if (isExist) throw Oops.Oh(ErrorCode.D3003);
+
+            var dictData = input.Adapt<SysDictData>();
+            await _sysDictDataRep.UpdateAsync(dictData, ignoreNullValues: true);
         }
 
-        public Task<List<SysDictData>> GetDictDataList([FromQuery] QueryDictDataListInput input)
+        /// <summary>
+        /// 字典值详情
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpGet("/sysDictData/detail")]
+        public async Task<SysDictData> GetDictData([FromQuery] QueryDictDataInput input)
         {
-            throw new NotImplementedException();
+            return await _sysDictDataRep.FirstOrDefaultAsync(u => u.Id == input.Id, false);
         }
 
+        /// <summary>
+        /// 修改字典值状态
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost("/sysDictData/changeStatus")]
+        public async Task ChangeDictDataStatus(ChageStateDictDataInput input)
+        {
+            var dictData = await _sysDictDataRep.FirstOrDefaultAsync(u => u.Id == input.Id);
+            if (dictData == null) throw Oops.Oh(ErrorCode.D3004);
+
+            if (!Enum.IsDefined(typeof(CommonStatus), input.Status))
+                throw Oops.Oh(ErrorCode.D3005);
+
+            dictData.Status = input.Status;
+            dictData.IsDeleted = false;
+        }
 
         /// <summary>
         /// 根据字典类型Id获取字典值集合
@@ -74,14 +169,16 @@ namespace ZAdmin.Core.Serive.Dict
                                                          .ToListAsync();
         }
 
-        public Task<PageResult<DictDataOutput>> QueryDictDataPageList([FromQuery] DictDataPageInput input)
+        /// <summary>
+        /// 删除字典下所有值
+        /// </summary>
+        /// <param name="dictTypeId"></param>
+        [NonAction]
+        public async Task DeleteByTypeId(long dictTypeId)
         {
-            throw new NotImplementedException();
+            var dictDatas = await _sysDictDataRep.Where(u => u.TypeId == dictTypeId).ToListAsync();
+            await _sysDictDataRep.DeleteAsync(dictDatas);
         }
 
-        public Task UpdateDictData(UpdateDictDataInput input)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

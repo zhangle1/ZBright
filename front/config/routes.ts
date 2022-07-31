@@ -43,6 +43,18 @@
     ],
   },
   {
+    path: '/develop',
+    icon: 'table',
+    name: '开发管理',
+    routes: [
+      {
+        name: '系统配置',
+        path: '/develop/config',
+        component: './develop/config',
+      },
+    ],
+  },
+  {
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',

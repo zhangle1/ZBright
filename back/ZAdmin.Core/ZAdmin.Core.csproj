@@ -15,6 +15,7 @@
     <PackageReference Include="Furion.Extras.Authentication.JwtBearer" Version="3.0.6" />
     <PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="3.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.3" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.19" />
     <PackageReference Include="UAParser" Version="3.1.47" />
     <PackageReference Include="Yitter.IdGenerator" Version="1.0.12" />
     <PackageReference Include="Zack.EFCore.Batch.MySQL.Pomelo_NET6" Version="6.0.11" />

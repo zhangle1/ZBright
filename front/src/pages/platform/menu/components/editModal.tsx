@@ -34,7 +34,6 @@ export type EditModalProps = {
 const MenuEditModal: React.FC<EditModalProps> = (props) => {
   const editFormRef = useRef<ProFormInstance>();
   if (props.action == 'add') {
-    console.log('是新增');
     editFormRef.current?.setFieldsValue(props.values);
   } else if (props.action == 'edit') {
     editFormRef.current?.setFieldsValue(props.values);
@@ -89,11 +88,6 @@ const MenuEditModal: React.FC<EditModalProps> = (props) => {
       await editMenu(value);
     } else {
       await addMenu(value);
-      // value.sysEmpInfo.posIdList = value.positionsCode.map((src: number) => { return src })
-      // value.sysEmpInfo.etIds = dataSource
-      // value.sysEmpParam = value.sysEmpInfo
-      // console.log("添加用户：" + JSON.stringify(value))
-      // await userAdd(value)
     }
     console.log('onFinish:' + JSON.stringify(value));
     props.onFinish?.();

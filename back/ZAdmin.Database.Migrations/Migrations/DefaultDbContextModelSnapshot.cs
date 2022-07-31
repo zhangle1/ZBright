@@ -129,6 +129,482 @@ namespace ZAdmin.Database.Migrations.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ZAdmin.Core.Entity.SysConfig", b =>
+                {
+                    b.Property<long>("Id")
+                        .HasColumnType("bigint")
+                        .HasComment("Id主键");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasComment("编码");
+
+                    b.Property<DateTimeOffset?>("CreatedTime")
+                        .HasColumnType("datetime(6)")
+                        .HasComment("创建时间");
+
+                    b.Property<long?>("CreatedUserId")
+                        .HasColumnType("bigint")
+                        .HasComment("创建者Id");
+
+                    b.Property<string>("CreatedUserName")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasComment("创建者名称");
+
+                    b.Property<string>("GroupCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasComment("常量所属分类的编码");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)")
+                        .HasComment("软删除标记");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasComment("名称");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
+                        .HasComment("备注");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int")
+                        .HasComment("状态");
+
+                    b.Property<string>("SysFlag")
+                        .HasMaxLength(5)
+                        .HasColumnType("varchar(5)")
+                        .HasComment("是否是系统参数");
+
+                    b.Property<DateTimeOffset?>("UpdatedTime")
+                        .HasColumnType("datetime(6)")
+                        .HasComment("更新时间");
+
+                    b.Property<long?>("UpdatedUserId")
+                        .HasColumnType("bigint")
+                        .HasComment("修改者Id");
+
+                    b.Property<string>("UpdatedUserName")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasComment("修改者名称");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("longtext")
+                        .HasComment("属性值");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("sys_config");
+
+                    b.HasComment("参数配置表");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 142307070902342L,
+                            Code = "DILON_JWT_SECRET",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "jwt密钥",
+                            Remark = "（重要）jwt密钥，默认为空，自行设置",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "xiaonuo"
+                        },
+                        new
+                        {
+                            Id = 142307070902343L,
+                            Code = "DILON_DEFAULT_PASSWORD",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "默认密码",
+                            Remark = "默认密码",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "123456"
+                        },
+                        new
+                        {
+                            Id = 142307070902344L,
+                            Code = "DILON_TOKEN_EXPIRE",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "token过期时间",
+                            Remark = "token过期时间（单位：秒）",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "86400"
+                        },
+                        new
+                        {
+                            Id = 142307070902345L,
+                            Code = "DILON_SESSION_EXPIRE",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "session会话过期时间",
+                            Remark = "session会话过期时间（单位：秒）",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "7200"
+                        },
+                        new
+                        {
+                            Id = 142307070902346L,
+                            Code = "DILON_ALIYUN_SMS_ACCESSKEY_ID",
+                            GroupCode = "ALIYUN_SMS",
+                            IsDeleted = false,
+                            Name = "阿里云短信keyId",
+                            Remark = "阿里云短信keyId",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的keyId"
+                        },
+                        new
+                        {
+                            Id = 142307070902347L,
+                            Code = "DILON_ALIYUN_SMS_ACCESSKEY_SECRET",
+                            GroupCode = "ALIYUN_SMS",
+                            IsDeleted = false,
+                            Name = "阿里云短信secret",
+                            Remark = "阿里云短信secret",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的secret"
+                        },
+                        new
+                        {
+                            Id = 142307070902348L,
+                            Code = "DILON_ALIYUN_SMS_SIGN_NAME",
+                            GroupCode = "ALIYUN_SMS",
+                            IsDeleted = false,
+                            Name = "阿里云短信签名",
+                            Remark = "阿里云短信签名",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的签名"
+                        },
+                        new
+                        {
+                            Id = 142307070902349L,
+                            Code = "DILON_ALIYUN_SMS_LOGIN_TEMPLATE_CODE",
+                            GroupCode = "ALIYUN_SMS",
+                            IsDeleted = false,
+                            Name = "阿里云短信-登录模板号",
+                            Remark = "阿里云短信-登录模板号",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "SMS_1877123456"
+                        },
+                        new
+                        {
+                            Id = 142307070902350L,
+                            Code = "DILON_ALIYUN_SMS_INVALIDATE_MINUTES",
+                            GroupCode = "ALIYUN_SMS",
+                            IsDeleted = false,
+                            Name = "阿里云短信默认失效时间",
+                            Remark = "阿里云短信默认失效时间（单位：分钟）",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "5"
+                        },
+                        new
+                        {
+                            Id = 142307070902351L,
+                            Code = "DILON_TENCENT_SMS_SECRET_ID",
+                            GroupCode = "TENCENT_SMS",
+                            IsDeleted = false,
+                            Name = "腾讯云短信secretId",
+                            Remark = "腾讯云短信secretId",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的secretId"
+                        },
+                        new
+                        {
+                            Id = 142307070902352L,
+                            Code = "DILON_TENCENT_SMS_SECRET_KEY",
+                            GroupCode = "TENCENT_SMS",
+                            IsDeleted = false,
+                            Name = "腾讯云短信secretKey",
+                            Remark = "腾讯云短信secretKey",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的secretkey"
+                        },
+                        new
+                        {
+                            Id = 142307070902353L,
+                            Code = "DILON_TENCENT_SMS_SDK_APP_ID",
+                            GroupCode = "TENCENT_SMS",
+                            IsDeleted = false,
+                            Name = "腾讯云短信sdkAppId",
+                            Remark = "腾讯云短信sdkAppId",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "1400375123"
+                        },
+                        new
+                        {
+                            Id = 142307070902354L,
+                            Code = "DILON_TENCENT_SMS_SIGN",
+                            GroupCode = "TENCENT_SMS",
+                            IsDeleted = false,
+                            Name = "腾讯云短信签名",
+                            Remark = "腾讯云短信签名",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的签名"
+                        },
+                        new
+                        {
+                            Id = 142307070902355L,
+                            Code = "DILON_EMAIL_HOST",
+                            GroupCode = "EMAIL",
+                            IsDeleted = false,
+                            Name = "邮箱host",
+                            Remark = "邮箱host",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "smtp.126.com"
+                        },
+                        new
+                        {
+                            Id = 142307070902356L,
+                            Code = "DILON_EMAIL_USERNAME",
+                            GroupCode = "EMAIL",
+                            IsDeleted = false,
+                            Name = "邮箱用户名",
+                            Remark = "邮箱用户名",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "test@126.com"
+                        },
+                        new
+                        {
+                            Id = 142307070902357L,
+                            Code = "DILON_EMAIL_PASSWORD",
+                            GroupCode = "EMAIL",
+                            IsDeleted = false,
+                            Name = "邮箱密码",
+                            Remark = "邮箱密码",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的邮箱密码"
+                        },
+                        new
+                        {
+                            Id = 142307070902358L,
+                            Code = "DILON_EMAIL_PORT",
+                            GroupCode = "EMAIL",
+                            IsDeleted = false,
+                            Name = "邮箱端口",
+                            Remark = "邮箱端口",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "465"
+                        },
+                        new
+                        {
+                            Id = 142307070902359L,
+                            Code = "DILON_EMAIL_SSL",
+                            GroupCode = "EMAIL",
+                            IsDeleted = false,
+                            Name = "邮箱是否开启ssl",
+                            Remark = "邮箱是否开启ssl",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "true"
+                        },
+                        new
+                        {
+                            Id = 142307070902360L,
+                            Code = "DILON_EMAIL_FROM",
+                            GroupCode = "EMAIL",
+                            IsDeleted = false,
+                            Name = "邮箱发件人",
+                            Remark = "邮箱发件人",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "test@126.com"
+                        },
+                        new
+                        {
+                            Id = 142307070902361L,
+                            Code = "DILON_FILE_UPLOAD_PATH_FOR_WINDOWS",
+                            GroupCode = "FILE_PATH",
+                            IsDeleted = false,
+                            Name = "Win本地上传文件路径",
+                            Remark = "Win本地上传文件路径",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "D:/tmp"
+                        },
+                        new
+                        {
+                            Id = 142307070902362L,
+                            Code = "DILON_FILE_UPLOAD_PATH_FOR_LINUX",
+                            GroupCode = "FILE_PATH",
+                            IsDeleted = false,
+                            Name = "Linux/Mac本地上传文件路径",
+                            Remark = "Linux/Mac本地上传文件路径",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "/tmp"
+                        },
+                        new
+                        {
+                            Id = 142307070902363L,
+                            Code = "DILON_UN_XSS_FILTER_URL",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "放开XSS过滤的接口",
+                            Remark = "多个url可以用英文逗号隔开",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "/demo/xssfilter,/demo/unxss"
+                        },
+                        new
+                        {
+                            Id = 142307070902364L,
+                            Code = "DILON_ENABLE_SINGLE_LOGIN",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "单用户登陆的开关",
+                            Remark = "true-打开，false-关闭，如果一个人登录两次，就会将上一次登陆挤下去",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "false"
+                        },
+                        new
+                        {
+                            Id = 142307070902365L,
+                            Code = "DILON_CAPTCHA_OPEN",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "登录验证码的开关",
+                            Remark = "true-打开，false-关闭",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "true"
+                        },
+                        new
+                        {
+                            Id = 142307070902366L,
+                            Code = "DILON_DRUID_USERNAME",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "Druid监控登录账号",
+                            Remark = "Druid监控登录账号",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "superAdmin"
+                        },
+                        new
+                        {
+                            Id = 142307070902367L,
+                            Code = "DILON_DRUID_PASSWORD",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "Druid监控界面登录密码",
+                            Remark = "Druid监控界面登录密码",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "123456"
+                        },
+                        new
+                        {
+                            Id = 142307070902368L,
+                            Code = "DILON_IP_GEO_API",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "阿里云定位api接口地址",
+                            Remark = "阿里云定位api接口地址",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "http://api01.aliyun.venuscn.com/ip?ip=%s"
+                        },
+                        new
+                        {
+                            Id = 142307070902369L,
+                            Code = "DILON_IP_GEO_APP_CODE",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "阿里云定位appCode",
+                            Remark = "阿里云定位appCode",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "461535aabeae4f34861884d392f5d452"
+                        },
+                        new
+                        {
+                            Id = 142307070902370L,
+                            Code = "DILON_ENABLE_OAUTH_LOGIN",
+                            GroupCode = "OAUTH",
+                            IsDeleted = false,
+                            Name = "Oauth用户登录的开关",
+                            Remark = "Oauth用户登录的开关",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "true"
+                        },
+                        new
+                        {
+                            Id = 142307070902371L,
+                            Code = "DILON_OAUTH_GITEE_CLIENT_ID",
+                            GroupCode = "OAUTH",
+                            IsDeleted = false,
+                            Name = "Oauth码云登录ClientId",
+                            Remark = "Oauth码云登录ClientId",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的clientId"
+                        },
+                        new
+                        {
+                            Id = 142307070902372L,
+                            Code = "DILON_OAUTH_GITEE_CLIENT_SECRET",
+                            GroupCode = "OAUTH",
+                            IsDeleted = false,
+                            Name = "Oauth码云登录ClientSecret",
+                            Remark = "Oauth码云登录ClientSecret",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "你的clientSecret"
+                        },
+                        new
+                        {
+                            Id = 142307070902373L,
+                            Code = "DILON_OAUTH_GITEE_REDIRECT_URI",
+                            GroupCode = "OAUTH",
+                            IsDeleted = false,
+                            Name = "Oauth码云登录回调地址",
+                            Remark = "Oauth码云登录回调地址",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "http://127.0.0.1:5566/oauth/callback/gitee"
+                        },
+                        new
+                        {
+                            Id = 142307070902374L,
+                            Code = "DILON_DEMO_ENV_FLAG",
+                            GroupCode = "DEFAULT",
+                            IsDeleted = false,
+                            Name = "演示环境",
+                            Remark = "演示环境的开关,true-打开，false-关闭，如果演示环境开启，则只能读数据不能写数据",
+                            Status = 0,
+                            SysFlag = "Y",
+                            Value = "false"
+                        });
+                });
+
             modelBuilder.Entity("ZAdmin.Core.Entity.SysDictData", b =>
                 {
                     b.Property<long>("Id")
